@@ -85,6 +85,7 @@ void LaunchController::decideAccount()
 
     // Find an account to use.
     auto accounts = APPLICATION->accounts();
+#if 0
     if (accounts->count() <= 0 || !accounts->anyAccountIsValid()) {
         // Tell the user they need to log in at least one account in order to play.
         auto reply = CustomMessageBox::selectable(m_parentWidget, tr("No Accounts"),
@@ -102,6 +103,7 @@ void LaunchController::decideAccount()
             return;
         }
     }
+#endif
 
     // Select the account to use. If the instance has a specific account set, that will be used. Otherwise, the default account will be used
     auto instanceAccountId = m_instance->settings()->get("InstanceAccountId").toString();
