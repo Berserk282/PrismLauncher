@@ -12,6 +12,7 @@
   jdk8,
   jdk17,
   jdk21,
+  jdk22,
   kdePackages,
   libGL,
   libpulseaudio,
@@ -27,6 +28,7 @@
   controllerSupport ? stdenv.isLinux,
   gamemodeSupport ? stdenv.isLinux,
   jdks ? [
+    jdk22
     jdk21
     jdk17
     jdk8
